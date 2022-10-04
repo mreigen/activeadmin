@@ -1,5 +1,5 @@
-require 'active_admin/base_controller/authorization'
-require 'active_admin/base_controller/menu'
+require 'active_admin/controllers/base/authorization'
+require 'active_admin/controllers/base/menu'
 
 module ActiveAdmin
   # BaseController for ActiveAdmin.

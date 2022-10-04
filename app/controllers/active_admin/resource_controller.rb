@@ -1,11 +1,11 @@
-require 'active_admin/resource_controller/action_builder'
-require 'active_admin/resource_controller/data_access'
-require 'active_admin/resource_controller/decorators'
-require 'active_admin/resource_controller/polymorphic_routes'
-require 'active_admin/resource_controller/scoping'
-require 'active_admin/resource_controller/streaming'
-require 'active_admin/resource_controller/sidebars'
-require 'active_admin/resource_controller/resource_class_methods'
+require 'active_admin/controllers/resource/action_builder'
+require 'active_admin/controllers/resource/data_access'
+require 'active_admin/controllers/resource/decorators'
+require 'active_admin/controllers/resource/polymorphic_routes'
+require 'active_admin/controllers/resource/scoping'
+require 'active_admin/controllers/resource/streaming'
+require 'active_admin/controllers/resource/sidebars'
+require 'active_admin/controllers/resource/resource_class_methods'
 
 module ActiveAdmin
   # All Resources Controller inherits from this controller.
@@ -16,15 +16,15 @@ module ActiveAdmin
     respond_to :html, :xml, :json
     respond_to :csv, only: :index
 
-    include ActionBuilder
-    include Decorators
-    include DataAccess
-    include PolymorphicRoutes
-    include Scoping
-    include Streaming
-    include Sidebars
+    include Controllers::Resource::ActionBuilder
+    include Controllers::Resource::Decorators
+    include Controllers::Resource::DataAccess
+    include Controllers::Resource::PolymorphicRoutes
+    include Controllers::Resource::Scoping
+    include Controllers::Resource::Streaming
+    include Controllers::Resource::Sidebars
     include ViewHelpers::DownloadFormatLinksHelper
-    extend  ResourceClassMethods
+    extend  Controllers::Resource::ResourceClassMethods
 
     def self.active_admin_config=(config)
       if @active_admin_config = config
