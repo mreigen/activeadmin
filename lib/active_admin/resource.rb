@@ -132,7 +132,7 @@ module ActiveAdmin
 
     # Return only defined resource actions
     def defined_actions
-      controller.instance_methods.map(&:to_sym) & ResourceController::ACTIVE_ADMIN_ACTIONS
+      controller.instance_methods.map(&:to_sym) & Controller::Resource::ACTIVE_ADMIN_ACTIONS
     end
 
     def belongs_to(target, options = {})

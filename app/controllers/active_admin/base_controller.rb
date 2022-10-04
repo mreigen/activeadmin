@@ -22,8 +22,8 @@ module ActiveAdmin
       attr_accessor :active_admin_config
     end
 
-    include Authorization
-    include Menu
+    include Controllers::Base::Authorization
+    include Controllers::Base::Menu
 
     private
 
