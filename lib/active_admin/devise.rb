@@ -50,26 +50,6 @@ module ActiveAdmin
       end
     end
 
-    class SessionsController < ::Devise::SessionsController
-      include ::ActiveAdmin::Devise::Controller
-    end
-
-    class PasswordsController < ::Devise::PasswordsController
-      include ::ActiveAdmin::Devise::Controller
-    end
-
-    class UnlocksController < ::Devise::UnlocksController
-      include ::ActiveAdmin::Devise::Controller
-    end
-
-    class RegistrationsController < ::Devise::RegistrationsController
-      include ::ActiveAdmin::Devise::Controller
-    end
-
-    class ConfirmationsController < ::Devise::ConfirmationsController
-      include ::ActiveAdmin::Devise::Controller
-    end
-
     def self.controllers_for_filters
       [SessionsController, PasswordsController, UnlocksController,
         RegistrationsController, ConfirmationsController
