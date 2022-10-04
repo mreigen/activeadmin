@@ -58,7 +58,7 @@ module ActiveAdminIntegrationSpecHelper
     method = action == "index" ? :apply_collection_decorator : :apply_decorator
 
     controller_class = Class.new do
-      include ActiveAdmin::ResourceController::Decorators
+      include ActiveAdmin::Controllers::Resource::Decorators
 
       public method
     end

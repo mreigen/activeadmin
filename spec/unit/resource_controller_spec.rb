@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ActiveAdmin::ResourceController do
+RSpec.describe ActiveAdmin::Controllers::Resource do
   let(:controller) { Admin::PostsController.new }
 
   describe "callbacks" do

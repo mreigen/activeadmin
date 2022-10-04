@@ -4,7 +4,7 @@ ActiveAdmin.before_load do |app|
 
   # Add our Extensions
   ActiveAdmin::Resource.send :include, ActiveAdmin::BatchActions::ResourceExtension
-  ActiveAdmin::ResourceController.send :include, ActiveAdmin::BatchActions::Controller
+  ActiveAdmin::Controllers::Resource.send :include, ActiveAdmin::BatchActions::Controller
 
   # Require all the views
   require "active_admin/batch_actions/views/batch_action_form"

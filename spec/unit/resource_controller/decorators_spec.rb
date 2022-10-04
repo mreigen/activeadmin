@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ActiveAdmin::ResourceController::Decorators do
+RSpec.describe ActiveAdmin::Controllers::Resource::Decorators do
   describe '#apply_decorator' do
     let(:resource) { Post.new }
     let(:controller) { controller_with_decorator(action, decorator_class) }

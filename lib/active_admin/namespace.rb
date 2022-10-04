@@ -233,7 +233,7 @@ module ActiveAdmin
 
     # TODO: replace `eval` with `Class.new`
     def register_resource_controller(config)
-      eval "class ::#{config.controller_name} < ActiveAdmin::ResourceController; end"
+      eval "class ::#{config.controller_name} < ActiveAdmin::Controllers::Resource; end"
       config.controller.active_admin_config = config
     end
 

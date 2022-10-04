@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ActiveAdmin::ResourceController::DataAccess do
+RSpec.describe ActiveAdmin::Controllers::Resource::DataAccess do
   before do
     load_resources { config }
   end
@@ -144,7 +144,7 @@ RSpec.describe ActiveAdmin::ResourceController::DataAccess do
 
   describe "find_collection" do
     let(:appliers) do
-      ActiveAdmin::ResourceController::DataAccess::COLLECTION_APPLIES
+      ActiveAdmin::Controllers::Resource::DataAccess::COLLECTION_APPLIES
     end
     let(:scoped_collection) do
       double "ScopedCollectionChain"
